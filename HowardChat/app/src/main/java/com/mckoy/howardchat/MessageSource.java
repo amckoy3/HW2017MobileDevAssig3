@@ -51,6 +51,7 @@ public class MessageSource {
                 List<Message> messageList = new ArrayList<Message>();
                 for (DataSnapshot messages : messageSnapshots) {
                     Message message = new Message(messages);
+                    messageList.add(message);
 
                 }
                 messageListener.onMessageRecieved(messageList);

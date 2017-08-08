@@ -21,8 +21,8 @@
             android:id="@+id/status_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Signed out"
             android:layout_margin="10dp"/>
+            <!--android:text="Signed out"-->
 
     </LinearLayout>
 </FrameLayout>
