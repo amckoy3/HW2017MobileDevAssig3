@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorFragmentBackground">#FFD1FF</color>
+    <color name="colorFragmentTextViewBackground">#AAAAAA</color>
+    <color name="Pink">#FFD1D1</color>
+    <color name="offPink">#FAB5B5</color>
+</resources>
