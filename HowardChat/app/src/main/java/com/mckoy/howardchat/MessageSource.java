@@ -48,9 +48,10 @@ public class MessageSource {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Iterable<DataSnapshot> messageSnapshots = dataSnapshot.getChildren();
-                ArrayList<Message> messageList = new ArrayList<Message>();
+                List<Message> messageList = new ArrayList<Message>();
                 for (DataSnapshot messages : messageSnapshots) {
                     Message message = new Message(messages);
+
                 }
                 messageListener.onMessageRecieved(messageList);
             }

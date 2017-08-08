@@ -108,6 +108,15 @@ public class MainActivity extends AppCompatActivity {
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         updateUI(currentUser);
+        Intent i = new Intent(this, MessageNotificationService.class);
+        stopService(i);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Intent i = new Intent(this, MessageNotificationService.class);
+        startService(i);
     }
 
     @Override
@@ -177,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void signIn() {
-        mProgressBar.setVisibility(View.VISIBLE);
+       mProgressBar.setVisibility(View.VISIBLE);
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
@@ -196,5 +205,13 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
+
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+        // An unresolvable error has occurred and Google APIs (including Sign-In) will not
+        // be available.
+        Log.d(TAG, "onConnectionFailed:" + connectionResult);
+        Toast.makeText(this, "Google Play Services error.", Toast.LENGTH_SHORT).show();
+    }
 }
+
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/mckoy/MobileApp/HW2017MobileDevAssig3/HowardChat/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="df300beb5bc7f710f6ec3103b99da92476b1544f">
+        <dex dex="/Users/mckoy/MobileApp/HW2017MobileDevAssig3/HowardChat/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6ef0e27b197e3c6a10f9c37b99733929ed1fba17/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mckoy/MobileApp/HW2017MobileDevAssig3/HowardChat/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/Users/mckoy/MobileApp/HW2017MobileDevAssig3/HowardChat/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_d9e490f986911c69fe6b9be9fbccc048bf88451d/classes.dex" />
+    </item>
+
+</items>

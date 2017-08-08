@@ -2,6 +2,7 @@ package com.mckoy.howardchat;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,17 +22,26 @@ import java.util.List;
 import java.util.Objects;
 
 public class MainFragment extends Fragment {
+    private ListView mListView;
+    private EditText mEditText;
+    private Button mbutton;
+
+    /*@Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }*/
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_main, container, false);
 
         // Get references to text views to display database data.
-        //final TextView rootTextView = v.findViewById(R.id.root_text_view);
-        //final TextView subTreeTextView = v.findViewById(R.id.subtree_text_view);
-        final ListView mListView = v.findViewById(R.id.list_view);
-        final EditText mEditText = v.findViewById(R.id.editText);
-        Button mbutton = v.findViewById(R.id.button);
+
+        mListView = v.findViewById(R.id.list_view);
+        mEditText = v.findViewById(R.id.editText);
+        mEditText.setText("");
+        mbutton = v.findViewById(R.id.button);
 
         MessageSource.get(getContext()).getMessages(new MessageSource.MessageListener(){
             @Override
